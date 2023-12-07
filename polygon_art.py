@@ -60,9 +60,9 @@ class Art:
             self.num_sides = 3
             for i in range(25):
                 self.draw_polygon()
-                self.random()
                 for i in range(3):
                     self.draw_inside()
+                self.random()
         if self.choice == 2:
             self.num_sides = 4
             for i in range(25):
@@ -70,6 +70,11 @@ class Art:
                 self.random()
         if self.choice == 6:
             self.num_sides = 4
+            for i in range(25):
+                self.draw_polygon()
+                for i in range(3):
+                    self.draw_inside()
+                self.random()
         if self.choice == 3:
             self.num_sides = 5
             for i in range(25):
@@ -77,6 +82,11 @@ class Art:
                 self.random()
         if self.choice == 7:
             self.num_sides = 5
+            for i in range(25):
+                self.draw_polygon()
+                for i in range(3):
+                    self.draw_inside()
+                self.random()
         if self.choice == 4:
             for i in range(25):
                 self.num_sides = random.randint(3, 5)
@@ -85,6 +95,10 @@ class Art:
         if self.choice == 8:
             for i in range(25):
                 self.num_sides = random.randint(3, 5)
+                self.draw_polygon()
+                for i in range(3):
+                    self.draw_inside()
+                self.random()
 
     def random(self):
         self.orientation = random.randint(0, 90)
