@@ -61,12 +61,28 @@ class Art:
             for i in range(25):
                 draw_polygon(self.num_sides, self.size, self.orientation, self.location, self.color, self.border_size)
                 self.random()
-                self.draw_inside()
-        if self.choice == 2 or self.choice == 6:
+                for i in range(3):
+                    self.draw_inside()
+        if self.choice == 2:
             self.num_sides = 4
-        if self.choice == 3 or self.choice == 7:
+            for i in range(25):
+                draw_polygon(self.num_sides, self.size, self.orientation, self.location, self.color, self.border_size)
+                self.random()
+        if self.choice == 6:
+            self.num_sides = 4
+        if self.choice == 3:
             self.num_sides = 5
-        if self.choice == 4 or self.choice == 8:
+            for i in range(25):
+                draw_polygon(self.num_sides, self.size, self.orientation, self.location, self.color, self.border_size)
+                self.random()
+        if self.choice == 7:
+            self.num_sides = 5
+        if self.choice == 4:
+            for i in range(25):
+                self.num_sides = random.randint(3, 5)
+                draw_polygon(self.num_sides, self.size, self.orientation, self.location, self.color, self.border_size)
+                self.random()
+        if self.choice == 8:
             self.num_sides = random.randint(3, 5)
 
     def random(self):
