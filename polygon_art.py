@@ -58,6 +58,10 @@ class Art:
                 self.random()
         if self.choice == 5:
             self.num_sides = 3
+            for i in range(25):
+                draw_polygon(self.num_sides, self.size, self.orientation, self.location, self.color, self.border_size)
+                self.random()
+                self.draw_inside()
         if self.choice == 2 or self.choice == 6:
             self.num_sides = 4
         if self.choice == 3 or self.choice == 7:
@@ -72,6 +76,7 @@ class Art:
         self.size = random.randint(50, 150)
         self.border_size = random.randint(1, 10)
         self.reduction_ratio = 0.618
+
     def draw_inside(self):
         turtle.penup()
         turtle.forward(self.size * (1 - self.reduction_ratio) / 2)
